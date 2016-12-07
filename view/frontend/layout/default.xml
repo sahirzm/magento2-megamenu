@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="catalog.topnav" remove="true" />
+    <referenceBlock name="store.menu">
+        <block name="store.megamenu" class="Magento\Framework\View\Element\Text" group="navigation-sections">
+            <arguments>
+                <argument name="text" xsi:type="string"><![CDATA[Hello World]]></argument>
+            </arguments>
+        </block> 
+    </referenceBlock>
+</page>
