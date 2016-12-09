@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
-    <referenceBlock name="catalog.topnav" remove="true" />
-    <referenceBlock name="store.menu">
-        <block name="store.megamenu" class="Magento\Framework\View\Element\Text" group="navigation-sections">
-            <arguments>
-                <argument name="text" xsi:type="string"><![CDATA[Hello World]]></argument>
-            </arguments>
-        </block> 
-    </referenceBlock>
+    <head>
+        <css src="Sahir_MegaMenu::css/bootstrap.min.css" />
+        <css src="Sahir_MegaMenu::css/bootstrap-theme.min.css" />
+    </head>
+    <referenceContainer name="page.top">
+		<referenceBlock name="navigation.sections" remove="true" />
+        <block name="store.megamenu" class="Sahir\MegaMenu\Block\Main"
+            template="megamenu.phtml" before="-"/>
+    </referenceContainer>
 </page>
