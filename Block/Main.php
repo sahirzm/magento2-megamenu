@@ -2,15 +2,11 @@
 namespace Sahir\MegaMenu\Block;
 
 use Magento\Framework\View\Element\Template;
-use Magento\Theme\Block\Html\TopMenu;
 
-class Main extends TopMenu {
+class Main extends Template {
 
-    public function getHtml($outermostClass = '', $childrenWrapClass = '', $limit = 0) {
+    public function getHtml() {
         $html = "";
-        foreach ($this->_menu->getChildren() as $child) {
-            $html .= "<li>" . $child->getName() . "</li>";
-        }
         return $html;
     }
 }
