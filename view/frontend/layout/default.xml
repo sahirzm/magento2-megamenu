@@ -1,13 +1,7 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
-    <head>
-        <!--
-        <css src="Sahir_MegaMenu::css/bootstrap.min.css" />
-        <css src="Sahir_MegaMenu::css/bootstrap-theme.min.css" />
-        -->
-    </head>
     <referenceContainer name="page.top">
-		<referenceBlock name="navigation.sections" remove="true" />
+		<referenceBlock name="navigation.sections" remove="false" />
         <block name="store.megamenu" class="Sahir\MegaMenu\Block\Main"
             template="megamenu.phtml" before="-"/>
     </referenceContainer>

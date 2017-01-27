@@ -1,0 +1,18 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sahir::sahir_magento2_exts"
+             title="Sahir Exts"
+             module="Sahir_MegaMenu"
+             sortOrder="9999"
+             resource="Magento_Backend::content"
+            />
+        <add id="Sahir_MegaMenu::sahir_megamenu_menu"
+             title="Mega Menu"
+             module="Sahir_MegaMenu"
+             sortOrder="1"
+             resource="Sahir_MegaMenu::config"
+             parent="Sahir::sahir_magento2_exts"
+             action="sahir_megamenu/index/index"
+            />             
+    </menu>
+</config>
