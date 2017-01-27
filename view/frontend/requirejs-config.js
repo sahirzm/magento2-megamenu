@@ -1,12 +1,10 @@
 var config = {
-    map: {
-        '*' : {
-            'megamenu/bootstrap': 'Sahir_MegaMenu/js/bootstrap'
-        },
-        shim: {
-            'megamenu/bootstrap': {
-                deps: ['jquery']
-            }
+    paths: {
+        'bootstrap': 'Sahir_MegaMenu/js/bootstrap'
+    },
+    shim: {
+        'bootstrap': {
+            deps: ['jquery']
         }
     }
-}
+};
