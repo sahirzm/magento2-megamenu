@@ -1,0 +1,3 @@
+[submodule "view/frontend/web/smartmenus"]
+	path = view/frontend/web/smartmenus
+	url = https://github.com/vadikom/smartmenus.git

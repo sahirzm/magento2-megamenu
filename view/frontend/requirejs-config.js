@@ -1,10 +1,5 @@
 var config = {
     paths: {
-        'bootstrap': 'Sahir_MegaMenu/js/bootstrap'
+        'jquery.smartmenus': 'Sahir_MegaMenu/smartmenus/dist/jquery.smartmenus.min'
     },
-    shim: {
-        'bootstrap': {
-            deps: ['jquery']
-        }
-    }
 };
