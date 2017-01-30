@@ -12,7 +12,7 @@
              sortOrder="1"
              resource="Sahir_MegaMenu::config"
              parent="Sahir::sahir_magento2_exts"
-             action="sahir_megamenu/index/index"
+             action="sahir_megamenu/menuitem/index"
             />             
     </menu>
 </config>

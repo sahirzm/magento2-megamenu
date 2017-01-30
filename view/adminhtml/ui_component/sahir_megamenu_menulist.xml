@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">sahir_megamenu_menulist.sahir_megamenu_menulist_data_source</item>
+            <item name="deps" xsi:type="string">sahir_megamenu_menulist.sahir_megamenu_menulist_data_source</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Menu Item</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">*/*/add</item>
+            </item>
+        </item>
+        <item name="spinner" xsi:type="string">sahir_megamenu_menulist_columns</item>
+    </argument>
+    <dataSource name="sahir_megamenu_menulist_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Sahir\MegaMenu\Ui\Component\Listing\DataProviders\Sahir\Megamenu\Menulist</argument>
+            <argument name="name" xsi:type="string">sahir_megamenu_menulist_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">menuitem_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">menuitem_id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <columns name="sahir_megamenu_menulist_columns">
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="resizeEnabled" xsi:type="boolean">false</item>
+                    <item name="resizeDefaultWidth" xsi:type="string">55</item>
+                    <item name="indexField" xsi:type="string">menuitem_id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+        <column name="menuitem_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">ID</item>
+                </item>
+            </argument>
+        </column>
+        <column name="menu_item_text">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Menu Text</item>
+                </item>
+            </argument>
+        </column>
+        <column name="menu_item_type">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Menu Type</item>
+                </item>
+            </argument>
+        </column>
+        <column name="category_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Category ID</item>
+                </item>
+            </argument>
+        </column>
+        <column name="is_active">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Is Active</item>
+                </item>
+            </argument>
+        </column>
+        <actionsColumn name="actions" class="Sahir\MegaMenu\Ui\Component\Listing\Column\Sahirmegamenumenulist\PageActions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="resizeEnabled" xsi:type="boolean">false</item>
+                    <item name="resizeDefaultWidth" xsi:type="string">107</item>
+                    <item name="indexField" xsi:type="string">menuitem_id</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+    <listingToolbar name="listing_top">
+        <paging name="listing_paging"/>
+    </listingToolbar>
+</listing>
