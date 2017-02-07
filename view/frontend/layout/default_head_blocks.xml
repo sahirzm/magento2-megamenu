@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="Sahir_MegaMenu::smartmenus/dist/css/sm-core-css.css"/>
-        <css src="Sahir_MegaMenu::smartmenus/dist/css/sm-blue/sm-blue.css"/>
+        <!--<css src="Sahir_MegaMenu::smartmenus/dist/css/sm-blue/sm-blue.css"/>-->
         <css src="Sahir_MegaMenu::css/megamenu.css"/>
     </head>
 </page>

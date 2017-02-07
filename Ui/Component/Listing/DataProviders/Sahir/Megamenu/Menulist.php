@@ -2,7 +2,7 @@
 namespace Sahir\MegaMenu\Ui\Component\Listing\DataProviders\Sahir\Megamenu;
 
 class Menulist extends \Magento\Ui\DataProvider\AbstractDataProvider
-{    
+{
     public function __construct(
         $name,
         $primaryFieldName,
@@ -14,4 +14,5 @@ class Menulist extends \Magento\Ui\DataProvider\AbstractDataProvider
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
     }
+
 }

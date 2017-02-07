@@ -3,7 +3,7 @@
         <add id="Sahir::sahir_magento2_exts"
              title="Sahir Exts"
              module="Sahir_MegaMenu"
-             sortOrder="9999"
+             sortOrder="50"
              resource="Magento_Backend::content"
             />
         <add id="Sahir_MegaMenu::sahir_megamenu_menu"

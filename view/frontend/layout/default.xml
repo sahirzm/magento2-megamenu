@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <referenceContainer name="page.top">
 		<referenceBlock name="navigation.sections" remove="true" />
-        <block name="store.megamenu" class="Sahir\MegaMenu\Block\Main"
+        <block name="store.megamenu" class="Sahir\MegaMenu\Block\MegaMenu"
             template="megamenu.phtml" before="-"/>
     </referenceContainer>
 </page>

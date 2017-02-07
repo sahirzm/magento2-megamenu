@@ -15,13 +15,13 @@ class PageActions extends \Magento\Ui\Component\Listing\Columns\Column
                 }
                 $item[$name]["view"] = [
                     "href"=>$this->getContext()->getUrl(
-                        "adminhtml/sahir_megamenu_menulist/viewlog",["id"=>$id]),
+                        "sahir_megamenu/menuitem/edit/", ["menuitem_id"=>$id]),
                     "label"=>__("Edit")
                 ];
             }
         }
 
         return $dataSource;
-    }    
-    
+    }
+
 }

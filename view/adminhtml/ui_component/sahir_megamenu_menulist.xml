@@ -10,7 +10,7 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add New Menu Item</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/add</item>
+                <item name="url" xsi:type="string">*/*/newaction</item>
             </item>
         </item>
         <item name="spinner" xsi:type="string">sahir_megamenu_menulist_columns</item>
