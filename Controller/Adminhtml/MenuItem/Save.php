@@ -40,7 +40,11 @@ class Save extends Action
         $id = (int) $this->getRequest()->getParam("menuitem_id");
         $menu_item = $this->_menuItemFactory->create();
         $menu_item->setMenuItemType($data['menu_item_type']);
+        $menu_item->setMenuItemText($data['menu_item_text']);
+        $menu_item->setSeoUrlKey(array_key_exists('seo_url_key', $data) ?
+                                $data['seo_url_key'] : '');
         $menu_item->setIsActive($data['is_active']);
+        $menu_item->setSortOrder($data['sort_order']);
         if ($menu_item->getMenuItemType() == 0) {
             // type is category
             $menu_item->setCategoryId($data['category_id']);
