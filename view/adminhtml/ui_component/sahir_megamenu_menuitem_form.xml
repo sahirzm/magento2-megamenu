@@ -136,8 +136,8 @@
         <fieldset name="category_fieldset">
 			<argument name="data" xsi:type="array">
 				<item name="config" xsi:type="array">
-					<item name="additionalClasses" xsi:type="string" translate="false">category-container</item>
-					<item name="label" xsi:type="string" translate="true">Menu Item Details</item>
+					<item name="additionalClasses" xsi:type="string" translate="false">category-container type-option-container</item>
+					<item name="label" xsi:type="string" translate="true">Category Details</item>
 				</item>
 			</argument>
 			<field name="category_id">
@@ -149,7 +149,7 @@
 						<item name="formElement" xsi:type="string">select</item>
 						<item name="component" xsi:type="string">Magento_Catalog/js/components/new-category</item>
 						<item name="elementTmpl" xsi:type="string">ui/grid/filters/elements/ui-select</item>
-						<item name="source" xsi:type="string">category_id</item>
+						<item name="source" xsi:type="string">menuitem</item>
 						<item name="dataScope" xsi:type="string">category_id</item>
 						<item name="filterOptions" xsi:type="boolean">true</item>
 						<item name="showCheckbox" xsi:type="boolean">false</item>
@@ -159,7 +159,7 @@
 						<item name="sortOrder" xsi:type="number">20</item>
 						<item name="required" xsi:type="boolean">false</item>
 						<item name="validation" xsi:type="array">
-							<item name="required-entry" xsi:type="boolean">true</item>
+							<item name="required-entry" xsi:type="boolean">false</item>
 						</item>
 					</item>
 				</argument>
@@ -174,7 +174,7 @@
 						<item name="source" xsi:type="string">menuitem</item>
 						<item name="dataScope" xsi:type="string">filter_attributes</item>
 						<item name="validation" xsi:type="array">
-							<item name="required-entry" xsi:type="boolean">true</item>
+							<item name="required-entry" xsi:type="boolean">false</item>
 						</item>
 					</item>
 				</argument>
@@ -183,8 +183,8 @@
         <fieldset name="url_fieldset">
 			<argument name="data" xsi:type="array">
 				<item name="config" xsi:type="array">
-					<item name="additionalClasses" xsi:type="string" translate="false">url-container</item>
-					<item name="label" xsi:type="string" translate="true">Menu Item Details</item>
+					<item name="additionalClasses" xsi:type="string" translate="false">url-container type-option-container</item>
+					<item name="label" xsi:type="string" translate="true">URL Details</item>
 				</item>
 			</argument>
 			<field name="url">
@@ -197,11 +197,57 @@
 						<item name="source" xsi:type="string">menuitem</item>
 						<item name="dataScope" xsi:type="string">url</item>
 						<item name="validation" xsi:type="array">
-							<item name="required-entry" xsi:type="boolean">true</item>
+							<item name="required-entry" xsi:type="boolean">false</item>
 						</item>
 					</item>
 				</argument>
 			</field>
 		</fieldset>
+        <fieldset name="products_fieldset">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="additionalClasses" xsi:type="string" translate="false">products-container type-option-container</item>
+					<item name="label" xsi:type="string" translate="true">Products Details</item>
+				</item>
+			</argument>
+			<field name="product_ids">
+				<argument name="data" xsi:type="array">
+					<item name="config" xsi:type="array">
+						<item name="label" xsi:type="string">Products</item>
+						<item name="visible" xsi:type="boolean">true</item>
+						<item name="dataType" xsi:type="string">text</item>
+						<item name="formElement" xsi:type="string">input</item>
+						<item name="source" xsi:type="string">menuitem</item>
+						<item name="dataScope" xsi:type="string">product_ids</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</argument>
+			</field>
+        </fieldset>
+        <fieldset name="cms_page_fieldset">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="additionalClasses" xsi:type="string" translate="false">cms-page-container type-option-container</item>
+					<item name="label" xsi:type="string" translate="true">CMS Page Details</item>
+				</item>
+			</argument>
+			<field name="cms_page_id">
+				<argument name="data" xsi:type="array">
+					<item name="config" xsi:type="array">
+						<item name="label" xsi:type="string">CMS Page ID</item>
+						<item name="visible" xsi:type="boolean">true</item>
+						<item name="dataType" xsi:type="string">text</item>
+						<item name="formElement" xsi:type="string">input</item>
+						<item name="source" xsi:type="string">menuitem</item>
+						<item name="dataScope" xsi:type="string">cms_page_id</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</argument>
+			</field>
+        </fieldset>
 	</fieldset>
 </form>

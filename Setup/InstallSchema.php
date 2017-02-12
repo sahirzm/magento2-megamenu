@@ -67,6 +67,18 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             [ 'nullable' => true ],
             'Url Rewrite ID'
         )->addColumn(
+            'product_ids',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            null,
+            [ 'nullable' => true ],
+            'Products'
+        )->addColumn(
+            'cms_page_id',
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            null,
+            [ 'nullable' => true ],
+            'CMS Page ID'
+        )->addColumn(
             'creation_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
             null,

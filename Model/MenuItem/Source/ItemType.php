@@ -7,7 +7,9 @@ class ItemType implements OptionSourceInterface
 {
     protected $itemTypes = [
         0 => 'Category',
-        1 => 'Url'
+        1 => 'Url',
+        2 => 'Products',
+        3 => 'CMS Page'
     ];
 
     /**

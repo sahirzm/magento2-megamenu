@@ -38,20 +38,31 @@ class Save extends Action
         }
         $data = $this->getRequest()->getPostValue();
         $id = (int) $this->getRequest()->getParam("menuitem_id");
-        $new_menu_item = $this->_menuItemFactory->create()->addData($data);
-        if ($new_menu_item->getMenuItemType() == 1) {
-            // type is url
-        } else if ($new_menu_item->getMenuItemType() == 0) {
+        $menu_item = $this->_menuItemFactory->create();
+        $menu_item->setMenuItemType($data['menu_item_type']);
+        $menu_item->setIsActive($data['is_active']);
+        if ($menu_item->getMenuItemType() == 0) {
             // type is category
+            $menu_item->setCategoryId($data['category_id']);
+            $menu_item->setFilterAttributes($data['filter_attributes']);
+        } else if ($menu_item->getMenuItemType() == 1) {
+            // type is url
+            $menu_item->setUrl($data['url']);
+        } else if ($menu_item->getMenuItemType() == 2) {
+            // type is products
+            $menu_item->setProductIds($data['product_ids']);
+        } else if ($menu_item->getMenuItemType() == 3) {
+            // type is cms_page_id
+            $menu_item->setCmsPageId($data['cms_page_id']);
         } else {
             // unknown menu type
             $this->messageManager->addError(__("Unknown Menu type provided."));
             return $resultRedirect->setPath('*/*/');
         }
         if ($id > 0) {
-            $this->_menuItemFactory->create()->addData($data)->setId($id)->save();
+            $menu_item->setId($id)->save();
         } else {
-            $this->_menuItemFactory->create()->setData($data)->save();
+            $menu_item->save();
         }
         $this->messageManager->addSuccess(__('Menu Item saved succesfully.'));
         return $resultRedirect->setPath('*/*/');

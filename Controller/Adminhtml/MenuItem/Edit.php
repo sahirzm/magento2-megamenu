@@ -18,19 +18,15 @@ class Edit extends \Magento\Backend\App\Action
     public function execute()
     {
         $menuitem = $this->_objectManager->create('Sahir\MegaMenu\Model\MenuItem');
-        $menuitem_id = NULL;
-        if ($this->getRequest()->isPost()) {
-            $menuitem_id = $this->getRequest()->getParam('menuitem_id');
-            if ($menuitem_id) {
-                $menuitem->load($menuitem_id);
-                if (!$menuitem->getId()) {
-                    $this->messageManager->addError(__('This menu item no longer exists.'));
-                    $resultRedirect = $this->resultRedirectFactory->create();
-                    return $resultRedirect->setPath('*/*/');
-                }
+        $menuitem_id = $this->getRequest()->getParam('menuitem_id');
+        if ($menuitem_id) {
+            $menuitem->load($menuitem_id);
+            if (!$menuitem->getId()) {
+                $this->messageManager->addError(__('This menu item no longer exists.'));
+                $resultRedirect = $this->resultRedirectFactory->create();
+                return $resultRedirect->setPath('');
             }
         }
-        $this->_coreRegistry->register('menuitem', $menuitem);
         $page = $this->resultPageFactory->create();
         $page->setActiveMenu('Sahir_MegaMenu::sahir_megamenu_menu')
                 ->addBreadcrumb(__('Mega Menu'), __('Mega Menu'))

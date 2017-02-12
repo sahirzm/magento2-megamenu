@@ -1,7 +1,36 @@
-<script type="text/x-magento-init">
-{
-    "*": {
-        "Sahir_MegaMenu/js/menuitem_form": {}
-    }
-}
+<script>
+require(['jquery'], function($) {
+
+    var menuTypeChange = function() {
+        $('.type-option-container').hide();
+        var menuItemType = $("select[name='menu_item_type'] option:selected").val();
+        console.log('menu_item_type =', menuItemType);
+        switch(menuItemType) {
+            case "0":
+                $('.category-container').show();
+                break;
+            case "1":
+                $('.url-container').show();
+                break;
+            case "2":
+                $('.products-container').show();
+                break;
+            case "3":
+                $('.cms-page-container').show();
+                break;
+            default:
+                console.log('invalid menu_item_type selected.');
+                break;
+        }
+    };
+
+    $(function() {
+        setTimeout(function() {
+
+            menuTypeChange();
+            $("select[name='menu_item_type']").change(menuTypeChange);
+        }, 1000);
+    });
+
+});
 </script>

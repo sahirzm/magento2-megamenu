@@ -66,8 +66,11 @@
         </column>
         <column name="menu_item_type">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Sahir\MegaMenu\Model\MenuItem\Source\ItemType</item>
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="dataType" xsi:type="string">select</item>
                     <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Menu Type</item>
                 </item>

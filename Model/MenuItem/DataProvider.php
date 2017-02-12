@@ -29,11 +29,6 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
             $this->_loadedData[$menuitem->getId()] = $menuitem->getData();
         }
 
-        $menuitem = $this->_coreRegistry->registry('menuitem');
-        if (!empty($menuitem)) {
-            $arr = $menuitem->getData();
-            $this->_loadedData[$menuitem->getId()] = $arr;
-        }
         return $this->_loadedData;
     }
 }
