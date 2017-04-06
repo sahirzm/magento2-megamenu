@@ -1,13 +1,16 @@
-<nav id="main-nav" role="navigation">
-  <ul id="main-menu" class="sm sm-blue">
-        <?php echo $this->getHtml(); ?>
-  </ul>
-</nav>
+<div class="megamenu-container">
+    <div class="container">
+        <nav id="main-nav" role="navigation">
+          <ul id="main-megamenu" class="sm sm-blue">
+                <?php echo $this->getHtml(); ?>
+          </ul>
+        </nav>
+    </div>
+</div>
 <script type="text/x-magento-init">
 {
 	"nav#main-nav": {
-		"Sahir_MegaMenu/js/megamenu": {"id": "#main-menu"}
+		"Sahir_MegaMenu/js/megamenu": {"id": "#main-megamenu"}
 	}
 }
 </script>
-

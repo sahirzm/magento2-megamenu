@@ -19,6 +19,12 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             [ 'identity' => true, 'nullable' => false, 'primary' => true, 'unsigned' => true, ],
             'Entity ID'
         )->addColumn(
+            'parent_menuitem_id',
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+            null,
+            [ 'nullable' => true, 'unsigned' => true, ],
+            'Parent Entity ID'
+        )->addColumn(
             'menu_item_text',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             255,
@@ -42,6 +48,12 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             255,
             [ 'nullable' => true ],
             'Filter Attributes'
+        )->addColumn(
+            'display_subcategory',
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+            null,
+            [ 'nullable' => false, 'default' => 0 ],
+            'Display Sub-category'
         )->addColumn(
             'url',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
